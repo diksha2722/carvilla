@@ -3,19 +3,93 @@ body,html{
     padding: 0;
     font-family: "Poppins", sans-serif;
 }
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: black;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+nav ul img{
+    position: absolute;
+    cursor: pointer;
+    top: 25px;
+    left: 20px;
+    height: 40px;
+}
+.sidebar li{
+    position: relative;
+    top: 50px;
+    padding: 30px 0;
+    width: 100%;
+}
+
+.sidebar a{
+    width: 100%;
+}
+.sidebar img{
+    position: absolute;
+    left: 30px;
+}
+
+
+/* Navigation styles */
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hideOnMobile{
+    position: relative;
+    right: 100px;
+}
+
+nav li{
+    height: 50px;
+}
+
+nav a{
+    height: 100%;
+    padding: 55px 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color:white;
+
+}
+
+nav a:hover{
+    text-decoration: none;
+}
+
+nav li:first-child{
+    position: absolute;
+    left: 90px;
+    font-size: 2.5em;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+.menubtn{
+    display: none;
+}
+
+
 header{
     display: flex;
     flex-direction: row;
     padding: 15px 0;
     position: relative;
     z-index: 1;
-}
-
-nav#navbar {
-    display: flex;
-    margin: 20px;
-    justify-content: space-between;
-    align-items: center;
 }
 
 
@@ -26,26 +100,9 @@ nav#navbar {
     color: white;
 }
 
-nav#navbar ul {
-    list-style-type: none;
-    display: flex;
-    margin-right: 3em;
-    padding: 0;
-}
-
-nav#navbar ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    font-family: "Mukta", sans-serif;
-    color: white;
-    text-decoration: none;
-    font-size: 1em;
-}
 
 #cars{
-    background:url('img2.jpg') no-repeat center center;
+    background:url('../img2.jpg') no-repeat center center;
     background-size: cover;
     overflow: hidden;
     width: 100%;
@@ -161,28 +218,35 @@ nav ul li a {
     background-color: blue;
 }
 
+
+/* Carousel container */
+#carouselExampleIndicators {
+    width: 100%;
+    max-width: 1200px; /* Increased max-width */
+    margin: auto;
+    padding: 20px 0;
+    margin-top: -50px;
+}
+
+/* Carousel indicators */
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: gray;
+    border: none;
+}
+
+.carousel-indicators .active {
+    background-color: black;
+}
+
+
 @media (max-width: 1000px) {
     #cars{
         width: 100%;
         height: 100vh;
     }
-    nav {
-        /* flex-direction: column; */
-        display: flex;
-        align-items: center;
-        max-width: 650px;
-    }
-
-    nav ul {
-        /* flex-direction: column; */
-        align-items: flex-start;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-        padding: 10px;
-    }
-
     #main {
         margin: 20px;
         padding: 20px;
@@ -221,30 +285,6 @@ nav ul li a {
     }
 }
 
-
-/* Carousel container */
-#carouselExampleIndicators {
-    width: 100%;
-    max-width: 1200px; /* Increased max-width */
-    margin: auto;
-    padding: 20px 0;
-    margin-top: -50px;
-}
-
-/* Carousel indicators */
-.carousel-indicators button {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: gray;
-    border: none;
-}
-
-.carousel-indicators .active {
-    background-color: black;
-}
-
-/* Carousel items */
 .carousel-inner {
     text-align: center;
     background-color: #f8f9fa;
@@ -302,9 +342,24 @@ nav ul li a {
 }
 
 @media (max-width: 480px) {
+    body,html{
+        overflow-x:hidden;
+    }
+    #logo{
+        margin: auto;
+    }
     #cars{
         flex-direction: column;
     }
+
+    #main{
+        margin-top: 30%;
+    }
+
+    nav li:first-child{
+        margin-top: 20px;
+    }
+    
     nav {
         flex-direction: column;
         align-items: flex-start;
@@ -313,8 +368,7 @@ nav ul li a {
 
     nav ul {
         flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
+        width: 20%;
     }
 
     nav ul li {
@@ -341,6 +395,94 @@ nav ul li a {
     .carousel-control-next-icon {
         width: 30px;
         height: 30px;
+    }
+    .hideOnMobile{
+        display: none;
+    }
+    .menubtn{
+        display: block;
+    }
+
+    .form-container{
+        position: relative;
+        bottom:250px; 
+        left: 0;
+        width: 90vw; 
+        margin: auto;
+        padding: 20px;
+        box-shadow: 0 10px 40px 0px rgba(38,40,64,.2);
+    }
+    .form-group .form-control{
+        outline: 0!important;
+        box-shadow: none;
+        border: 1px solid #f8f8f8;
+        background: #f8f8f8;
+        height: 60px;
+        width: 75vw;
+    }
+    
+    .form-group label {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        margin: auto;
+        background-color: white;
+    }
+    .form-container .form-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        align-content: center;
+    }
+    .form-control {
+        font-family: "Poppins", sans-serif;
+        height: 25px;
+        border-radius: 5px;
+    
+    }
+
+    .features {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+    }
+    
+    .features .feature {
+        position: relative;
+        bottom: 70px;
+        width: 100%;
+        height: 40vh;
+        margin: 10px 0;
+        padding: 20px 10px;
+    }
+
+    .feature h3 {
+        font-size: 1.2em;
+        margin: 10px 0;
+    }
+
+    .feature p {
+        font-size: 0.9em;
+        margin: 10px 0;
+    }
+    
+}
+@media (max-width: 1000px) {
+    .features {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .features .feature {
+        margin-bottom: 20px;
+        width: calc(50% - 20px);
+    }
+
+    .feature3 {
+        position: relative;
+        bottom: 0;
     }
 }
 
