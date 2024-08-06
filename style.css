@@ -102,7 +102,7 @@ header{
 
 
 #cars{
-    background:url('../img2.jpg') no-repeat center center;
+    background:url('img2.jpg') no-repeat center center;
     background-size: cover;
     overflow: hidden;
     width: 100%;
