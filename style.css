@@ -102,7 +102,7 @@ header{
 
 
 #cars{
-    background:url('img2.jpg') no-repeat center center;
+    background:url('../img2.jpg') no-repeat center center;
     background-size: cover;
     overflow: hidden;
     width: 100%;
@@ -199,12 +199,19 @@ header{
     transition: background-color 0.3s, color 0.3s;
 }
 
+.features .feature img{
+    width: 50px;
+}
+
+
 .features .feature h3 {
+    font-size: 20px;
     font-family: "Poppins", sans-serif;
     margin: 20px 0 10px;
 }
 
 .features .feature p {
+    font-size: 16px;
     font-family: "Poppins", sans-serif;
     color: #3f3939;
 }
@@ -216,6 +223,9 @@ header{
 .features .feature:hover{
     box-shadow: 0 10px 15px;
     background-color: blue;
+}
+.features .feature:hover img {
+    filter: brightness(0) invert(1);
 }
 
 
@@ -402,6 +412,9 @@ header{
     .menubtn{
         display: block;
     }
+    .btn1{
+        margin-right: 10px;
+    }
 
     .form-container{
         position: relative;
@@ -463,8 +476,8 @@ header{
         margin: 10px 0;
     }
 
-    .feature p {
-        font-size: 0.9em;
+    .features .feature p {
+        font-size: 16px;
         margin: 10px 0;
     }
     
