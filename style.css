@@ -363,7 +363,7 @@ header{
     }
 
     #main{
-        margin-top: 30%;
+        margin-top: 15%;
     }
 
     nav li:first-child{
@@ -418,7 +418,7 @@ header{
 
     .form-container{
         position: relative;
-        bottom:250px; 
+        bottom:114px; 
         left: 0;
         width: 90vw; 
         margin: auto;
